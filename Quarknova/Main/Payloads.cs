@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
@@ -474,8 +474,8 @@ namespace Quarknova.Main
 									for (;;)
 									{
 										waveOut.Play();
-										while (waveOut.PlaybackState == 1)
-										{
+										while (waveOut.PlaybackState == PlaybackState.Playing) // hi! ultimateduck here, can somebody
+										{													   // tell mes if it works? kinda busy rn
 											Thread.Sleep(100);
 										}
 										mp3FileReader.Position = 0L;
